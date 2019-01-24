@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% if title %}
+        <title> About- {{ title }}</title>
+    {% else %}
+        <title>About</title>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+	<!--Bootstrap stylesheet-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>About</h1>
+    <h2>Some information about our group.</h2>
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.team_member }} is the {{ post.position }}</p>
+        <p>{{ post.content }}</p>
+    {% endfor %}
+	
+	<button type="button" onclick="DEFINE FUNCTION HERE">Swipe left</button>
+	<button type="button" onclick="DEFINE FUNCTION HERE">Swipe right</button>
+</body>
+</html>
